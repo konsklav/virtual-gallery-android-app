@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pal_yellow"
+    tools:context=".PaintingsProjectionActivity">
+
+    <TextView
+        android:id="@+id/vvgPaintingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Category of Paintings!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/vvgPaintingsTextView"
+        app:layout_constraintBottom_toTopOf="@id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <!-- LinearLayout to hold all paintings, titles, and descriptions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Painting 1 -->
+            <TextView
+                android:id="@+id/titleTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Title of the Painting!"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/paintingImageView1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/portrait1"
+                android:scaleType="fitCenter"
+                android:contentDescription="Portrait 1" />
+
+            <TextView
+                android:id="@+id/descriptionTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Description: A famous painting by Vincent van Gogh."
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/speakerImageButton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Play Description 1"
+                android:background="@color/purple"
+                android:onClick="speak"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+            <!-- Painting 2 -->
+            <TextView
+                android:id="@+id/titleTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Title of the Painting!"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/paintingImageView2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/portrait2"
+                android:scaleType="fitCenter"
+                android:contentDescription="Portrait 2" />
+
+            <TextView
+                android:id="@+id/descriptionTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description: A famous painting by Vincent van Gogh."
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingBottom="16dp" />
+
+            <ImageButton
+                android:id="@+id/speakerImageButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Play Description 2"
+                android:background="@color/purple"
+                android:onClick="speak"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+            <!-- Painting 3 -->
+            <TextView
+                android:id="@+id/titleTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Title of the Painting!"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/paintingImageView3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/portrait3"
+                android:scaleType="fitCenter"
+                android:contentDescription="Portrait 3" />
+
+            <TextView
+                android:id="@+id/descriptionTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description: A famous painting by Vincent van Gogh."
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingBottom="16dp" />
+
+            <ImageButton
+                android:id="@+id/speakerImageButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Play Description 3"
+                android:background="@color/purple"
+                android:onClick="speak"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backToCategoriesMenu"
+        android:text="@string/back_string"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+</androidx.constraintlayout.widget.ConstraintLayout>

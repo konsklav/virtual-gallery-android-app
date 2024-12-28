@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">second_android_project</string>
+
+    <string name="welcome_string">Welcome to the Vincent Van Gogh virtual gallery!</string>
+    <string name="explore_string">Explore!</string>
+
+    <string name="select_category_string">Select the category of paintings you wish to see!</string>
+    <string name="categories_string">Categories:</string>
+    <string name="portraits_string">Self-Portraits</string>
+    <string name="externals_string">External Spaces</string>
+    <string name="internals_string">Internal Spaces</string>
+    <string name="objects_string">Objects</string>
+    <string name="select_string">Select</string>
+
+    <string name="back_string">Back to the Categories menu!</string>
+</resources>
